@@ -5,22 +5,31 @@
 //          PART ONE
 // ***************************
 // Write a JavaScript program to display the current day and time, start with:
-console.log(new Date)
-
+console.log(`line 8 displayDate: ${new Date}`)
 const displayDate = () => {
   const currentDate = new Date()
-
   document.getElementById("display-element").innerHTML = currentDate;
 }
- 
 
 // Write a JavaScript program to convert a number to a string.
+// This function takes a number from index.html
+const numToString = (n) => {
+  console.log(`line 17 numToString: ${typeof(n)}`)
+  const num = n.toString()
+  console.log(`line 19 numToString: ${typeof(num)}`)
+}
 
-
+numToString(2);
 
 // Write a JavaScript program to convert a string to the number.
+const stringToNumber = (s) => {
+  console.log(`line 26 stringToNumber: ${typeof(s)}`)
+  const num = parseInt(s);
+  console.log(`line 28 stringToNumber: ${num}`)
+  console.log(`line 29 stringToNumber: ${typeof(num)}`)
+}
 
-
+stringToNumber('ylime');
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
@@ -30,21 +39,53 @@ const displayDate = () => {
   // * NaN
   // * String
   
+const dataTypes = (v) => {
+  console.log(`${v} is type of ${typeof(v)}`)
+  switch(typeof(v)) {
+    case 'boolean':
+      console.log(`${v} is a boolean!`)
+      break;
+    case null:
+      console.log(`${v} is null!`)
+      break;
+    case undefined:
+      console.log(`${v} is undefined!`)
+      break;
+    case 'number':
+      console.log(`${v} is a number!`)
+      break;
+    case NaN:
+      console.log(`${v} is not a number!`)
+      break;
+    case 'string':
+      console.log(`${v} is a string!`)
+      break;
+    default:
+      console.error(`Nothing matches`)
+  }
+}
 
-  
+dataTypes([1,2,3]);
+
 // Write a JavaScript program that adds 2 numbers together.
+// +
+const addition = (s, a) => {
+  const sum = s+a
+  console.log(sum)
+}
 
-
+addition(2, 4);
 
 // Write a JavaScript program that runs only when 2 things are true.
-
+// &&
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
-
+// ||
 
 
 // Write a JavaScript program that runs when both things are not true.  
+// !
 
 // ***************************
 //         PART TWO
